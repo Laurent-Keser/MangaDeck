@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "768101506911",
+    "project_id": "mangadeck",
+    "storage_bucket": "mangadeck.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768101506911:android:f8c84ea9b044d598c3e0ea",
+        "android_client_info": {
+          "package_name": "com.example.mangadeck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768101506911-2hocc4m02qiqp3t88km5iekhvc2akfhe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAgB4RA-cOMESXL2denhmCJljyzEuF2PQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768101506911-2hocc4m02qiqp3t88km5iekhvc2akfhe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

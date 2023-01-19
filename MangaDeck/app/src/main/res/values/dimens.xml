@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="layout_margin">16dp</dimen>
+    <dimen name="text_size">20sp</dimen>
+    <dimen name="constraint_normal_space">16dp</dimen>
+    <dimen name="esi_width">45dp</dimen>
+    <dimen name="esi_height">38dp</dimen>
+    <dimen name="esi_marginEnd">3dp</dimen>
+</resources>

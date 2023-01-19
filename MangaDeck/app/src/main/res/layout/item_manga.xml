@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="property"
+            type="projetmob.mangadeck.model.MangaProperty"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/layoutRelatifItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/manga_item_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:url="@{property.image}"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/image_de_pr_sentation_de_manga" />
+
+        <TextView
+            android:id="@+id/manga_item_title"
+            style="@style/Subheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/manga_item_image"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="-2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toRightOf="@+id/manga_item_image"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{property.title}"
+            tools:text="@string/mangaTitle" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/manga_item_rating"
+            style="@style/Widget.MaterialRatingBar.RatingBar.Indicator.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/manga_item_title"
+            android:layout_alignLeft="@+id/manga_item_title"
+            android:layout_marginBottom="4dp"
+            android:isIndicator="true"
+            app:avgRating="@{property.avgRating}" />
+
+        <TextView
+            android:id="@+id/manga_item_num_ratings"
+            style="@style/Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/manga_item_rating"
+            android:layout_alignBottom="@+id/manga_item_rating"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/manga_item_rating"
+            android:gravity="center_vertical"
+            app:numRatingList="@{property.numRating}"
+            android:textColor="@color/greyDisabled"
+            tools:text="@string/numRating" />
+        <TextView
+            android:id="@+id/manga_item_category"
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/manga_item_rating"
+            android:layout_alignLeft="@+id/manga_item_title"
+            android:textColor="@color/greySecondary"
+            android:text="@{property.category}"
+            tools:text="@string/categorie" />
+
+        <TextView
+            android:id="@+id/manga_item_manga_divider"
+            style="@style/TextDivider"
+            android:layout_alignTop="@+id/manga_item_category"
+            android:layout_toRightOf="@+id/manga_item_category"
+            android:text="@string/divider_bullet" />
+
+        <TextView
+            android:id="@+id/manga_item_type"
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/manga_item_category"
+            android:layout_toRightOf="@+id/manga_item_manga_divider"
+            android:textColor="@color/greySecondary"
+            android:text="@{property.type}"
+            tools:text="@string/type" />
+
+    </RelativeLayout>
+</layout>

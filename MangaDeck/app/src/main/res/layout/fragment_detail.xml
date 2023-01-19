@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="projetmob.mangadeck.detail.DetailViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/esi"
+                style="@style/EsiLogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.88"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_action_name"
+                android:contentDescription="@string/logo_esi" />
+
+            <ImageView
+                android:id="@+id/mangadeckTitre"
+                style="@style/MangadeckLogo"
+                android:layout_width="0dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/esi"
+                app:srcCompat="@drawable/mangadeck_titre"
+                android:contentDescription="@string/logo_mangadeck" />
+
+            <ImageView
+                android:id="@+id/image_detail"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mangadeckTitre"
+                app:url="@{viewModel.mangaProperty.image}"
+                android:contentDescription="@string/image_de_pr_sentation_du_manga" />
+
+            <TextView
+                android:id="@+id/title_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/titre"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/image_detail"
+                app:layout_constraintTop_toBottomOf="@+id/mangadeckTitre" />
+
+            <TextView
+                android:id="@+id/status_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/status"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/image_detail"
+                app:layout_constraintTop_toBottomOf="@+id/title_label" />
+
+            <TextView
+                android:id="@+id/category_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/cat_gorie"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/image_detail"
+                app:layout_constraintTop_toBottomOf="@+id/status_label" />
+
+            <TextView
+                android:id="@+id/episode_chapter_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                app:episodeChapterLabel="@{viewModel.mangaProperty}"
+                app:layout_constraintStart_toEndOf="@+id/image_detail"
+                app:layout_constraintTop_toBottomOf="@+id/avgRating_label" />
+
+            <TextView
+                android:id="@+id/numRating_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/nombre_de_votes"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/image_detail"
+                app:layout_constraintTop_toBottomOf="@+id/category_label" />
+
+            <TextView
+                android:id="@+id/avgRating_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/score"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/image_detail"
+                app:layout_constraintTop_toBottomOf="@+id/numRating_label" />
+
+            <TextView
+                android:id="@+id/synopsis_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/synopsis"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_detail" />
+
+            <TextView
+                android:id="@+id/title_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="36dp"
+                android:text="@{viewModel.mangaProperty.title}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/title_label"
+                app:layout_constraintTop_toBottomOf="@+id/mangadeckTitre" />
+
+            <TextView
+                android:id="@+id/status_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@{viewModel.mangaProperty.status}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/status_label"
+                app:layout_constraintTop_toBottomOf="@+id/title_detail" />
+
+            <TextView
+                android:id="@+id/episode_chapter_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="8dp"
+                app:episodeChapterDetail="@{viewModel.mangaProperty}"
+                app:layout_constraintEnd_toStartOf="@+id/fab_show_rating_dialog"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/episode_chapter_label"
+                app:layout_constraintTop_toBottomOf="@+id/avgRating_label"
+                tools:text="nombre de chapitres: " />
+
+            <TextView
+                android:id="@+id/category_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@{viewModel.mangaProperty.category}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/category_label"
+                app:layout_constraintTop_toBottomOf="@+id/status_detail" />
+
+            <TextView
+                android:id="@+id/numRating_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/numRating_label"
+                app:layout_constraintTop_toBottomOf="@+id/category_detail"
+                app:numRatingDetail="@{viewModel.mangaProperty.numRating}" />
+
+            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                android:id="@+id/avgRating_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:isIndicator="true"
+                app:avgRating="@{viewModel.mangaProperty.avgRating}"
+                app:layout_constraintBottom_toBottomOf="@+id/avgRating_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.07"
+                app:layout_constraintStart_toEndOf="@+id/avgRating_label"
+                app:layout_constraintTop_toTopOf="@+id/avgRating_label" />
+
+            <TextView
+                android:id="@+id/synopsis_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:text="@{viewModel.mangaProperty.synopsis}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/synopsis_label" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_show_rating_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:onClick="@{() -> viewModel.showDialog()}"
+                app:layout_constraintBottom_toTopOf="@+id/synopsis_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_add_white_24px"
+                android:contentDescription="@string/boutton_pour_ajouter_un_vote" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/review_recycler"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/synopsis_detail"
+                tools:listitem="@layout/item_rating" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

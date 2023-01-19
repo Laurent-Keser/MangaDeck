@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="review"
+            type="projetmob.mangadeck.model.ReviewProperty" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:id="@+id/review_avatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/image_de_profile"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_help_center_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:profileUrl="@{review.userId}"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/rating_item_name"
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:maxWidth="150dp"
+            android:maxLines="1"
+            android:text="@{review.username}"
+            android:textColor="@color/greySecondary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/review_avatar"
+            app:layout_constraintTop_toBottomOf="@+id/manga_name"
+            tools:text="Bob" />
+
+        <TextView
+            android:id="@+id/rating_item_date"
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/rating_item_rating"
+            android:textColor="@color/greySecondary"
+            app:date="@{review.date}"
+            app:layout_constraintStart_toStartOf="@+id/rating_item_name"
+            app:layout_constraintTop_toBottomOf="@+id/rating_item_name"
+            tools:text="9/27/2017" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/rating_item_rating"
+            style="@style/Widget.MaterialRatingBar.RatingBar.Indicator.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            app:avgRating="@{review.rating}"
+            app:layout_constraintBottom_toBottomOf="@+id/rating_item_name"
+            app:layout_constraintStart_toEndOf="@+id/rating_item_name"
+            app:layout_constraintTop_toTopOf="@+id/rating_item_name" />
+
+        <TextView
+            android:id="@+id/rating_item_text"
+            style="@style/Subheader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rating_item_name"
+            android:layout_marginBottom="8dp"
+            android:text="@{review.review}"
+            android:textColor="@color/greyPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/rating_item_name"
+            app:layout_constraintTop_toBottomOf="@+id/rating_item_date"
+            tools:text="Gem bi1. Oui." />
+
+        <TextView
+            android:id="@+id/manga_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{review.mangaId}"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/rating_item_name"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Manga" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

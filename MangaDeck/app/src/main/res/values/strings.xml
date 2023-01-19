@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">MangaDeck</string>
+    <string name='aboutText'>
+        Cette application est un receuil de critiques de mangas/ animés
+        \n\n\n 52167 - Keser - Laurent - E12 - 2021
+    </string>
+    <string name="about">About</string>
+    <string name="mailLabel">Adresse e-mail</string>
+    <string name="MotDePasseLabel">Mot de passe</string>
+    <string name="passwordLabel">Mot de passe</string>
+    <string name="nvCompte">Créer mon compte</string>
+    <string name="askNvAccount"><u>Créer un compte</u></string>
+    <string name="registerButton">Connexion</string>
+    <string name="logOut">Logout</string>
+    <string name="profile">Profil</string>
+    <string name="divider_bullet">•</string>
+    <string name="mangaTitle">Naruto</string>
+    <string name="numRating">(10)</string>
+    <string name="categorie">Shonen</string>
+    <string name="type">Manga</string>
+    <string name="login_page_title">Page de connexion</string>
+    <string name="list_page_title">Liste</string>
+    <string name="register_title">Inscription</string>
+    <string name="fragment_detail">Détail</string>
+    <string name="usernameLabel">Pseudo</string>
+    <string name="profile_pseudo_label">Pseudo:</string>
+    <string name="email_label">Email :</string>
+    <string name="add_image_label">Ajouter un avatar</string>
+    <string name="reviews_label">Reviews</string>
+    <string name="Review_hint">Donnez nous votre avis</string>
+    <string name="logo_esi">Logo Esi</string>
+    <string name="logo_mangadeck">Logo Mangadeck</string>
+    <string name="image_de_pr_sentation_du_manga">image de présentation du manga</string>
+    <string name="titre">Titre:</string>
+    <string name="status">Status:</string>
+    <string name="cat_gorie">Catégorie:</string>
+    <string name="nombre_de_votes">Nombre de votes:</string>
+    <string name="score">Score:</string>
+    <string name="synopsis">Synopsis:</string>
+    <string name="boutton_pour_ajouter_un_vote">boutton pour ajouter un vote</string>
+    <string name="veuillez_rentrer_une_adresse_mail">veuillez rentrer une adresse mail</string>
+    <string name="veuillez_rentrer_un_mot_de_passe">veuillez rentrer un mot de passe</string>
+    <string name="photo_de_profile">photo de profile</string>
+    <string name="veuillez_rentrer_un_pseudo">veuillez rentrer un pseudo</string>
+    <string name="image_de_pr_sentation_de_manga">image de présentation de manga</string>
+    <string name="image_de_profile">image de profile</string>
+
+</resources>

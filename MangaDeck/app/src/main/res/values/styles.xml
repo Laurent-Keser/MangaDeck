@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="NameStyle">
+        <item name="android:layout_marginTop">@dimen/layout_margin</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:paddingTop">@dimen/constraint_normal_space</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+
+    <style name="EsiLogo">
+        <item name="android:layout_width">@dimen/esi_width</item>
+        <item name="android:layout_height">@dimen/esi_height</item>
+        <item name="layout_goneMarginStart">@dimen/layout_margin</item>
+        <item name="layout_goneMarginTop">@dimen/layout_margin</item>
+        <item name="layout_goneMarginEnd">@dimen/esi_marginEnd</item>
+    </style>
+
+    <style name="MangadeckLogo">
+
+        <item name="layout_goneMarginStart">@dimen/layout_margin</item>
+    </style>
+
+    <style name="Subheader">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Caption">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Body1">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextDivider">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:textColor">@color/greySecondary</item>
+    </style>
+
+</resources>
